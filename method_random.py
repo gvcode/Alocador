@@ -1,10 +1,12 @@
 from depend import np
 from depend import cost
+from deals import deal_sizes2
 
-def method_random(prefs, n_opt, n_obs, k): #k = number of iterations
+def method_random(n, k, prefs, iters):
     obj = float('inf')
-    for _ in range(k):
-        alloc_try = np.concatenate([np.full(5, i) for i in range(n_opt)])
+    sizes = deal_sizes2(n, k, prefs)
+    for _ in range(iters):
+        alloc_try = np.concatenate([np.full(s, i) for (i, s) in zip(range(k), sizes)])
         np.random.shuffle(alloc_try)
         obj_try = cost(alloc_try, prefs)
         if obj_try < obj:
