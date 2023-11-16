@@ -1,0 +1,15 @@
+# daria pra fazer a escolha sobre os valores que o grupo teve de prefeência méida com cada tamanho,
+  # agora fazer a escolha sobre os valores que a população toda tve de preferência méida, com cada tamanho
+  
+obj = #matrix(nrow = n_obs, ncol = n_pop)
+
+
+Selection:
+  # daria pra fazer: se o 1st best está cheio, va para a proxima obs. Apos preencher os 1sts,
+  # volte do inicio olhandopros 2nds pra preencher o que sobrou, etc
+  #se empatra no order, escolhe aleatorio
+  
+vetor com todas as possibilidades
+obj calcular a média, não a soma
+
+store children as interger
