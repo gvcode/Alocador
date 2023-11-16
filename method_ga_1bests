@@ -1,0 +1,4 @@
+from depend import np
+from depend import cost
+from deals import deal_sizes2
+

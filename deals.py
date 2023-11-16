@@ -8,9 +8,10 @@ def create_sizes_pool(n, k):
     remainder = n % 5
 
     sizes_pool[:n_full] = 5
+
     if remainder == 4:
         sizes_pool[n_full] = 4
-    elif remainder != 0:
+    else:
         sizes_pool[:remainder] += 1
     
     return sizes_pool
