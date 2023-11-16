@@ -1,7 +1,7 @@
 # --- Imports and functions ---
 from depend import np
 from depend import cost
-from method_random import method_random
+from method_random import method_random1, method_random2
 
 # --- Data reading --- 
 # Option 1 - simulate:
@@ -21,7 +21,7 @@ prefs = np.array([np.random.permutation(range(1, k + 1)) for _ in range(n)])
 # Some function(s) that receive the preferences and number of groups, and create an allocation
 
 # Option 1 - randomize:
-alloc = method_random(n, k, prefs, iters = 10)
+alloc = method_random1(n, k, prefs, iters = 10)
 
 obj = cost(alloc, prefs)
 print(obj)
